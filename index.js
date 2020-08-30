@@ -6,4 +6,4 @@ server.get('/', (req, res) => {
 	res.send('Salom bu index')
 })
 
-server.listen(4000, () => console.log('Ready at 4000'))
+server.listen(process.env.port, () => console.log('Ready at 4000'))
