@@ -6,6 +6,8 @@ const { TOKEN: Token } = require('./src/Controller/Token')
 
 const app = express()
 
+app.use(express.static('public'))
+
 app.get('/', Home.GET)
 
 app.get('/token', Token.GET)
