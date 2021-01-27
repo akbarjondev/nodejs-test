@@ -45,3 +45,16 @@ body {
 	object-fit: cover;
 	border-radius: 50%;
 }
+
+.intro__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.intro__input {
+	margin-bottom: 15px;
+}
+
+.intro__button {
+	cursor: pointer;
+}
