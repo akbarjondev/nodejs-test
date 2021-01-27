@@ -17,7 +17,8 @@ const POST = (req, res) => {
 			token: sha1(username + user.password + (new Date).getTime()),
 			userId: user.id
 		}).end()
-
+	} else {
+		res.status(401).end()
 	}
 }
 
