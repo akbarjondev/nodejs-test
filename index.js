@@ -1,9 +1,14 @@
+const CONFIG = require('./src/config')
 const express = require('express')
 
-const server = express()
+const app = express()
 
-server.get('/', (req, res) => {
-	res.send('Salom bu index emas').end()
+app.get('/', (req, res) => {
+	res.send('Salom bu index emas, aldadim Index').end()
 })
 
-server.listen(process.env.PORT || 8080, () => console.log('Ready at 8080'))
+app.get('/token', (req, res) => {
+	res.send('Token').end()
+})
+
+app.listen(CONFIG.PORT, () => console.log(`Ready at ${CONFIG.PORT}`))
